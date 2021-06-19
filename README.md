@@ -15,7 +15,7 @@ https://streamable.com/1gtyss
 
 - Download https://github.com/Ventraks/vtr_joblisting
 - Put it in the `[your_folder]` directory
-- Write `ensure vtr_bankrobbery` in server.cfg
+- Write `ensure vtr_joblisting` in server.cfg
 - Make sure you have all required resources
 - Go to ms-peds/config.lua, add line what is down 
 - Restart your server
