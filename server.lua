@@ -1,5 +1,4 @@
 ESX = nil
---local availableJobs = {}
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
