@@ -36,7 +36,7 @@ https://streamable.com/1gtyss
 
 # Legal
 ### License
-vtr_bankrobbery - Fleeca Bank Robbery script for FiveM
+vtr_joblisting - Simple Job Center script for ESX FiveM. Using bt-target, ms-peds and nh-context
 
 Copyright (C) 2021 Ventraks
 
