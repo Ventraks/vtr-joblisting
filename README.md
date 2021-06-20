@@ -11,7 +11,7 @@ Simple Job Center script for ESX FiveM. Using bt-target, ms-peds and nh-context.
 
 https://streamable.com/1gtyss
 
-### Installation
+### Download & Installation
 
 - Download https://github.com/Ventraks/vtr_joblisting
 - Put it in the `[your_folder]` directory
