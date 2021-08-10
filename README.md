@@ -1,6 +1,6 @@
 # vtr_joblisting
 
-Simple Job Center script for ESX FiveM. Using bt-target, ms-peds and nh-context. Made by Ventraks
+Simple Job Center script for ESX FiveM. Using bt-target and nh-context. Made by Ventraks
 
 ### Requirements
 * [bt-target](https://github.com/Mojito-Fivem/bt-target)
