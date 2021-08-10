@@ -17,16 +17,7 @@ https://streamable.com/1gtyss
 - Put it in the `[your_folder]` directory
 - Write `ensure vtr_joblisting` in server.cfg
 - Make sure you have all required resources
-- Go to ms-peds/config.lua, add line what is down 
 - Restart your server
-
-```
-	{
-		model = `cs_paper`,
-		coords = vector4(-1083.0645751954,-245.82865905762,37.763278961182, 200.0),
-		gender = 'male'
-	},
-```
 
 ### Editing
 
