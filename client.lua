@@ -22,6 +22,47 @@ Citizen.CreateThread(function()
 	EndTextCommandSetBlipName(blip)
 end)
 
+local pedspawned = false
+local pedLocation = vector3(-1083.0645751954, -245.82865905762, 37.763278961182, 200.0)
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(1000)
+		for k, v in pairs(pedLocation) do
+			local pos = GetEntityCoords(PlayerPedId())	
+			local dist = #(v.Cords - pos)
+			
+			if dist < 40 and pedspawned == false then
+				TriggerEvent('spawn:ped',v.Cords,v.h)
+				pedspawned = true
+			end
+			if dist >= 35 then
+				pedspawned = false
+				DeletePed(npc)
+			end
+		end
+	end
+end)
+
+RegisterNetEvent('spawn:ped')
+AddEventHandler('spawn:ped',function(coords,heading)
+	local hash = GetHashKey('cs_paper')
+	if not HasModelLoaded(hash) then
+		RequestModel(hash)
+		Wait(10)
+	end
+	while not HasModelLoaded(hash) do 
+		Wait(10)
+	end
+
+    pedspawned = true
+	npc = CreatePed(5, hash, coords, heading, false, false)
+	FreezeEntityPosition(npc, true)
+    SetEntityInvincible(npc, true)
+    SetBlockingOfNonTemporaryEvents(npc, true)
+	end
+end)
+
 Citizen.CreateThread(function()
     local peds= {
         `cs_paper`,
@@ -31,7 +72,7 @@ Citizen.CreateThread(function()
             {
                 event = "target:joblisting",
                 icon = "fas fa-address-book",
-                label = "Find a job",
+                label = "Get a job",
                 job = {"all"}
             },
         },
