@@ -4,7 +4,6 @@ Simple Job Center script for ESX FiveM. Using bt-target, ms-peds and nh-context.
 
 ### Requirements
 * [bt-target](https://github.com/Mojito-Fivem/bt-target)
-* [ms-peds](https://github.com/MiddleSkillz/ms-peds)
 * [nh-context](https://github.com/nerohiro/nh-context)
 
 ### Preview
