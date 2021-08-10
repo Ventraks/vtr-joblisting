@@ -26,7 +26,7 @@ https://streamable.com/1gtyss
 
 # Legal
 ### License
-vtr_joblisting - Simple Job Center script for ESX FiveM. Using bt-target, ms-peds and nh-context
+vtr_joblisting - Simple Job Center script for ESX FiveM. Using bt-target and nh-context
 
 Copyright (C) 2021 Ventraks
 
