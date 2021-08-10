@@ -56,10 +56,9 @@ RegisterNetEvent('nh-context:joblisting', function()
             header = "Reporter",
             txt = "Start working as a reporter",
             params = {
-                event = "nh:jobs:reporter",
+                event = "jobs:client:setJob",
                 args = {
-                    number = 1,
-                    id = 2
+                    job = 'reporter'
                 }
             }
         },
@@ -68,10 +67,9 @@ RegisterNetEvent('nh-context:joblisting', function()
             header = "Fisherman",
             txt = "Start working as a fisherman",
             params = {
-                event = "nh:jobs:fisherman",
+                event = "jobs:client:setJob",
                 args = {
-                    number = 2,
-                    id = 3
+                    job = 'fisherman'
                 }
             }
         },
@@ -80,10 +78,9 @@ RegisterNetEvent('nh-context:joblisting', function()
             header = "Lumberjack",
             txt = "Start working as a lumberjack",
             params = {
-                event = "nh:jobs:lumberjack",
+                event = "jobs:client:setJob",
                 args = {
-                    number = 3,
-                    id = 4
+                    job = 'lumberjack'
                 }
             }
         },
@@ -92,32 +89,16 @@ RegisterNetEvent('nh-context:joblisting', function()
             header = "Unemployed",
             txt = "Leave your current job",
             params = {
-                event = "nh:jobs:unemployed",
+                event = "jobs:client:setJob",
                 args = {
-                    number = 8,
-                    id = 9
+                    job = 'unemployed'
                 }
             }
         },
     })
 end)
 
-RegisterNetEvent('nh:jobs:reporter', function()
-	TriggerServerEvent('vtr-joblisting:setJob', 'reporter')
-    ESX.ShowNotification('Your new job is Reporter!')
-end)
-
-RegisterNetEvent('nh:jobs:fisherman', function()
-	TriggerServerEvent('vtr-joblisting:setJob', 'fisherman')
-    ESX.ShowNotification('Your new job is Fisherman')
-end)
-
-RegisterNetEvent('nh:jobs:lumberjack', function()
-	TriggerServerEvent('vtr-joblisting:setJob', 'lumberjack')
-    ESX.ShowNotification('Your new job is Lumberjack')
-end)
-
-RegisterNetEvent('nh:jobs:unemployed', function()
-	TriggerServerEvent('vtr-joblisting:setJob', 'unemployed')
-    ESX.ShowNotification('Your new job is Unemployed')
+RegisterNetEvent('joblisting:client:setJob', function(jobs)
+	TriggerServerEvent('joblisting:server:setJob', jobs.job)
+    ESX.ShowNotification('Your new job is '.. jobs.job)
 end)
