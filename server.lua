@@ -2,9 +2,9 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-RegisterServerEvent('vtr_joblisting:setJob')
-AddEventHandler('vtr_joblisting:setJob', function(job)
+RegisterServerEvent('joblisting:server:setJob')
+AddEventHandler('joblisting:server:setJob', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 
-	xPlayer.setJob(job, 0)
+	xPlayer.setJob(jobs.job, 0)
 end)
