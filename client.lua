@@ -46,7 +46,7 @@ end)
 
 RegisterNetEvent('spawn:ped')
 AddEventHandler('spawn:ped',function(coords,heading)
-	local hash = GetHashKey('cs_paper')
+	local hash = Config.Ped
 	if not HasModelLoaded(hash) then
 		RequestModel(hash)
 		Wait(10)
@@ -64,9 +64,7 @@ AddEventHandler('spawn:ped',function(coords,heading)
 end)
 
 Citizen.CreateThread(function()
-    local peds= {
-        `cs_paper`,
-    }
+    local peds = Config.Ped
     exports['bt-target']:AddTargetModel(peds, {
         options = {
             {
