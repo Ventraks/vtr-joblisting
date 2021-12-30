@@ -1,4 +1,4 @@
-# vtr_joblisting
+# vtr-joblisting
 
 Simple Job Center script for ESX FiveM using bt-target and nh-context
 
@@ -14,7 +14,7 @@ https://streamable.com/1gtyss
 
 ### 2.0
 * Removed ms-peds 
-* User-
+* User-friendly
 
 ### 1.0
 * Initial release
