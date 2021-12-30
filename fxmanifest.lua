@@ -1,7 +1,5 @@
 fx_version 'adamant'
-
 game 'gta5'
-
 description 'Ventraks Job Listing'
 
 server_scripts {
