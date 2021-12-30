@@ -1,4 +1,4 @@
-# vtr-joblisting
+# vtr-joblisting used with ESX Framework
 
 Simple Job Center script for ESX FiveM using bt-target and nh-context
 
