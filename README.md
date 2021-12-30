@@ -8,7 +8,8 @@ Simple Job Center script for FiveM using bt-target and nh-context
 
 ## Preview
 
-https://streamable.com/1gtyss
+https://user-images.githubusercontent.com/83806248/147792080-317e01a4-05b1-4e67-9eb8-122e3476afbf.mp4
+
 
 ## Change Logs
 
