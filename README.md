@@ -1,6 +1,6 @@
 # vtr_joblisting
 
-Simple Job Center script for ESX FiveM. Using bt-target and nh-context. Made by Ventraks
+Simple Job Center script for ESX FiveM using bt-target and nh-context
 
 ### Requirements
 * [bt-target](https://github.com/Mojito-Fivem/bt-target)
@@ -10,24 +10,16 @@ Simple Job Center script for ESX FiveM. Using bt-target and nh-context. Made by 
 
 https://streamable.com/1gtyss
 
-### Download & Installation
+# Change Logs
 
-- Download https://github.com/Ventraks/vtr_joblisting
-- Put it in the `[your_folder]` directory
-- Write `ensure vtr_joblisting` in server.cfg
-- Make sure you have all required resources
-- Restart your server
+### 2.0
+* Removed ms-peds 
+* User-
 
-### Editing
+### 1.0
+* Initial release
 
-- You can add your own jobs in vtr_joblisting/client.lua
-- You can change ped with changing every `cs_paper` to `your_ped` 
-  - [Ped list](https://docs.fivem.net/docs/game-references/ped-models/)
-
-# Legal
-### License
-vtr_joblisting - Simple Job Center script for ESX FiveM. Using bt-target and nh-context
-
-Copyright (C) 2021 Ventraks
+# Issues and Suggestions
+Please use the GitHub issues system to report issues or make suggestions, when making suggestion, please keep [Suggestion] in the title to make it clear that it is a suggestion.
 
 You can redistribute it or modify it. You can't sell this script like your own.
