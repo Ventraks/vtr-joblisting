@@ -9,7 +9,7 @@ end)
 
 -- Create blips
 Citizen.CreateThread(function()
-	local blip = AddBlipForCoord(-1083.0645751954,-245.82865905762,37.763278961182)
+	local blip = AddBlipForCoord(vector3(Config.Blip))
 
 	SetBlipSprite (blip, 498)
 	SetBlipDisplay(blip, 4)
@@ -18,17 +18,16 @@ Citizen.CreateThread(function()
 	SetBlipAsShortRange(blip, true)
     
 	BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString('Job Center')
+    	AddTextComponentString('Job Center')
 	EndTextCommandSetBlipName(blip)
 end)
 
 local pedspawned = false
-local pedLocation = vector3(-1083.0645751954, -245.82865905762, 37.763278961182, 200.0)
 
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(1000)
-		for k, v in pairs(pedLocation) do
+		for k, v in pairs(Config.Location) do
 			local pos = GetEntityCoords(PlayerPedId())	
 			local dist = #(v.Cords - pos)
 			
@@ -45,22 +44,24 @@ Citizen.CreateThread(function()
 end)
 
 RegisterNetEvent('spawn:ped')
-AddEventHandler('spawn:ped',function(coords,heading)
-	local hash = Config.Ped
-	if not HasModelLoaded(hash) then
-		RequestModel(hash)
-		Wait(10)
-	end
-	while not HasModelLoaded(hash) do 
-		Wait(10)
-	end
+AddEventHandler('spawn:ped',function(coords, heading)
+    local hash = Config.Ped
+    if not HasModelLoaded(hash) then
+	RequestModel(hash)
+	Wait(10)
+    end
+		
+    while not HasModelLoaded(hash) do 
+	Wait(10)
+    end
 
     pedspawned = true
-	npc = CreatePed(5, hash, coords, heading, false, false)
-	FreezeEntityPosition(npc, true)
+    npc = CreatePed(5, hash, coords, heading, false, false)
+    FreezeEntityPosition(npc, true)
     SetEntityInvincible(npc, true)
     SetBlockingOfNonTemporaryEvents(npc, true)
-	end
+		
+    end
 end)
 
 Citizen.CreateThread(function()
