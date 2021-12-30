@@ -2,11 +2,11 @@
 
 Simple Job Center script for ESX FiveM using bt-target and nh-context
 
-### Requirements
+# Dependencies 
 * [bt-target](https://github.com/Mojito-Fivem/bt-target)
 * [nh-context](https://github.com/nerohiro/nh-context)
 
-### Preview
+#Preview
 
 https://streamable.com/1gtyss
 
